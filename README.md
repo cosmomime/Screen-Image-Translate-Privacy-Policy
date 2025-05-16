@@ -55,7 +55,6 @@ In the current version, since Cosmo Screen & Image Translate processes data loca
 In future updates, we may integrate additional third-party services such as:
 
 * Online translation services (like DeepL or similar): If implemented, these would process text extracted from your images to provide enhanced translation quality
-* License Verification Library (LVL): For verifying legitimate purchases of our paid app
 
 If we implement these services, they will be clearly disclosed in updates to this privacy policy, including details about what data is shared with these services and links to their respective privacy policies.
 

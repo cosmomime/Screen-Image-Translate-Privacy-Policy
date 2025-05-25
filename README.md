@@ -95,11 +95,11 @@ All image processing and translation occurs locally on your device. No images or
 
 ## Third-Party Services
 
-**Google Play Services** - App distribution, updates, billing | [Privacy Policy](https://www.google.com/policies/privacy/)
-**Google AdMob** (Free users) - Advertisements and targeting | [Privacy Policy](https://support.google.com/admob/answer/6128543)
-**Firebase Crashlytics** - Crash reporting (anonymized) | [Privacy Policy](https://firebase.google.com/support/privacy)
-**Google Play Billing** - Secure payment processing | [Privacy Policy](https://payments.google.com/payments/apis-secure/get_legal_document?ldo=0&ldt=privacynotice)
-**OpenCV** - Local image processing only (no data collection)
+- **Google Play Services** - App distribution, updates, billing | [Privacy Policy](https://www.google.com/policies/privacy/)
+- **Google AdMob** (Free users) - Advertisements and targeting | [Privacy Policy](https://support.google.com/admob/answer/6128543)
+- **Firebase Crashlytics** - Crash reporting (anonymized) | [Privacy Policy](https://firebase.google.com/support/privacy)
+- **Google Play Billing** - Secure payment processing | [Privacy Policy](https://payments.google.com/payments/apis-secure/get_legal_document?ldo=0&ldt=privacynotice)
+- **OpenCV** - Local image processing only (no data collection)
 
 ### Data Sharing
 - **Images/translations**: Never shared - processed locally only
@@ -137,11 +137,14 @@ Cosmo Screen & Image Translate is not directed to anyone under the age of 13. In
 
 ## Data Management
 
-**Local Data**: Data stored locally on your device (preferences, glossaries, cached models) is retained until you clear the app's data through Android settings, uninstall the application, or manually delete specific data like glossary entries.
+### Local Data
+Data stored locally on your device (preferences, glossaries, cached models) is retained until you clear the app's data through Android settings, uninstall the application, or manually delete specific data like glossary entries.
 
-**Third-Party Data**: Advertising data is retained according to Google's policies, crash reports are typically retained for 90 days, and purchase data is retained according to Google Play's billing policies and legal requirements.
+### Third-Party Data
+Advertising data is retained according to Google's policies, crash reports are typically retained for 90 days, and purchase data is retained according to Google Play's billing policies and legal requirements.
 
-**Data Deletion**: To delete your data, clear app data in Android settings or uninstall the app (local), reset your advertising ID in Android settings (ads), or contact us to request deletion of specific crash reports.
+### Data Deletion
+To delete your data, clear app data in Android settings or uninstall the app (local), reset your advertising ID in Android settings (ads), or contact us to request deletion of specific crash reports.
 
 ## User Responsibility for Translated Content
 

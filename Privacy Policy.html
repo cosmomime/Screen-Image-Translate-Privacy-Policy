@@ -87,29 +87,25 @@
         </ul>
     </div>
 
-    <h2>What Information We Collect</h2>
+    <h2>Information We Collect</h2>
 
-    <h3>Local Data Processing</h3>
-    <p>The core translation functionality processes all image data entirely on your device and is not transmitted to external servers. The app does not require personal information such as your name, email address, or location for translation features. Any images or translations you create are stored only on your device in locations you specify through the Storage Access Framework.</p>
-    <p><strong>Note:</strong> While translation processing is local, the app does integrate with third-party services (detailed below) that may collect certain data for advertising, crash reporting, and billing purposes.</p>
-
-    <h3>Data Stored Locally on Your Device</h3>
+    <h3>Local Data (Stored on Your Device)</h3>
     <ul>
         <li>App preferences and settings</li>
         <li>User tier status (free/premium)</li>
-        <li>Temporary access permissions for premium features</li>
         <li>Translation glossary entries</li>
         <li>Cached translation models</li>
     </ul>
 
-    <h3>Data Collected by Third-Party Services</h3>
-    <p>We integrate with several third-party services that may collect data:</p>
+    <h3>Third-Party Data Collection</h3>
     <ul>
-        <li><strong>Google AdMob</strong> (free users only): Device identifiers, usage patterns, advertising data</li>
+        <li><strong>Google AdMob</strong> (free users): Device identifiers, usage patterns, advertising data, general location</li>
         <li><strong>Firebase Crashlytics</strong>: Crash reports, performance data, device information</li>
-        <li><strong>Google Play Services</strong>: Device information, account authentication, billing data</li>
+        <li><strong>Google Play Services</strong>: Device info, account authentication, billing data</li>
         <li><strong>Google Play Billing</strong>: Purchase transactions, subscription status</li>
     </ul>
+
+    <p><strong>Note:</strong> All translation processing occurs locally - your images and translations never leave your device.</p>
 
     <h2>Advertising and Monetization</h2>
 
@@ -129,6 +125,7 @@
         <li>App usage information (interactions with ads, app usage patterns)</li>
         <li>Advertising ID for personalized ads</li>
         <li>Network connectivity information</li>
+        <li>Location information (general location, not precise real-time location data)</li>
     </ul>
 
     <p><strong>Ad Personalization:</strong></p>
@@ -194,133 +191,41 @@
     <p>This data is stored locally on your device and managed by the respective third-party services according to their privacy policies.</p>
 
     <h2>Translation Processing</h2>
-    <p>Cosmo Screen & Image Translate is designed to work primarily offline with all translation processing performed locally on your device.</p>
-
-    <h3>Current Translation Features</h3>
-    <ul>
-        <li>All image processing and translation occurs locally on your device</li>
-        <li>No images or translations are transmitted to external servers</li>
-        <li>Translation models are cached locally for offline use</li>
-        <li>Your translation data remains completely private</li>
-    </ul>
-
-    <h3>Future Online Translation Services (Optional)</h3>
-    <p>In future updates, we may offer optional online translation services to provide enhanced translation quality. If implemented:</p>
-    <ul>
-        <li>Features will be clearly marked as using online services</li>
-        <li>Will be optional and disabled by default</li>
-        <li>Will require explicit user consent before activation</li>
-        <li>Will transmit only extracted text (not images) to translation services</li>
-        <li>Will be subject to third-party translation service privacy policies</li>
-    </ul>
+    <p>All image processing and translation occurs locally on your device. No images or translations are transmitted to external servers. In future updates, we may offer optional online translation services that will be clearly marked and require explicit consent.</p>
 
     <h2>Third-Party Services</h2>
+    <p><strong>Google Play Services</strong> - App distribution, updates, billing | <a href="https://www.google.com/policies/privacy/">Privacy Policy</a></p>
+    <p><strong>Google AdMob</strong> (Free users) - Advertisements and targeting | <a href="https://support.google.com/admob/answer/6128543">Privacy Policy</a></p>
+    <p><strong>Firebase Crashlytics</strong> - Crash reporting (anonymized) | <a href="https://firebase.google.com/support/privacy">Privacy Policy</a></p>
+    <p><strong>Google Play Billing</strong> - Secure payment processing | <a href="https://payments.google.com/payments/apis-secure/get_legal_document?ldo=0&ldt=privacynotice">Privacy Policy</a></p>
+    <p><strong>OpenCV</strong> - Local image processing only (no data collection)</p>
 
-    <h3>Current Third-Party Services</h3>
-    <p>Our app integrates with the following third-party services:</p>
-
-    <p><strong>Google Play Services:</strong> App distribution, updates, and in-app purchases</p>
+    <h3>Data Sharing</h3>
     <ul>
-        <li>Collects device information for app functionality</li>
-        <li>Manages Google Play account authentication</li>
-        <li>Processes billing and subscription information</li>
-        <li><a href="https://www.google.com/policies/privacy/">Privacy Policy</a></li>
+        <li><strong>Images/translations:</strong> Never shared - processed locally only</li>
+        <li><strong>Crash data:</strong> Anonymized reports to Firebase for debugging</li>
+        <li><strong>Ad data:</strong> Device identifiers to AdMob (free users only)</li>
+        <li><strong>Purchase data:</strong> Transaction details to Google Play Billing</li>
     </ul>
 
-    <p><strong>Google AdMob</strong> (Free users only): Displays advertisements</p>
-    <ul>
-        <li>Collects device identifiers and usage patterns</li>
-        <li>Provides personalized advertisements</li>
-        <li>Tracks ad interactions and performance</li>
-        <li><a href="https://support.google.com/admob/answer/6128543">AdMob Privacy Policy</a></li>
-        <li><a href="https://policies.google.com/privacy">Google Ads Privacy & Terms</a></li>
-    </ul>
-
-    <p><strong>Firebase Crashlytics:</strong> Crash reporting and performance monitoring</p>
-    <ul>
-        <li>Automatically collects crash reports and performance data</li>
-        <li>Helps improve app stability and user experience</li>
-        <li>Data is anonymized and used for debugging purposes</li>
-        <li><a href="https://firebase.google.com/support/privacy">Privacy Policy</a></li>
-    </ul>
-
-    <p><strong>Google Play Billing:</strong> Processing premium subscriptions and purchases</p>
-    <ul>
-        <li>Handles secure payment processing</li>
-        <li>Manages subscription status and renewals</li>
-        <li>Provides purchase verification and security</li>
-        <li><a href="https://payments.google.com/payments/apis-secure/get_legal_document?ldo=0&ldt=privacynotice">Privacy Policy</a></li>
-    </ul>
-
-    <p><strong>OpenCV:</strong> Open-source computer vision library for local image processing</p>
-    <ul>
-        <li><strong>Completely local processing:</strong> All operations occur entirely on your device</li>
-        <li><strong>No network access:</strong> Does not connect to the internet or external servers</li>
-        <li><strong>No data collection:</strong> Does not collect, store, or transmit any personal information</li>
-        <li><strong>Privacy-focused:</strong> Your images never leave your device when using OpenCV features</li>
-    </ul>
-
-    <h3>Data Sharing with Third Parties</h3>
-    <ul>
-        <li><strong>Images and translations:</strong> Never shared with third parties - all processing occurs locally on your device</li>
-        <li><strong>Crash reports:</strong> Anonymized crash data shared with Firebase Crashlytics for debugging</li>
-        <li><strong>Advertising data:</strong> Device identifiers and usage patterns shared with AdMob for ad personalization (free users only)</li>
-        <li><strong>Purchase information:</strong> Transaction details shared with Google Play Billing for payment processing</li>
-    </ul>
-
-    <h2>User Rights and Data Control</h2>
+    <h2>Your Rights and Controls</h2>
 
     <h3>Free vs Premium Users</h3>
-    <p><strong>Free Users:</strong></p>
     <ul>
-        <li>Subject to advertising data collection by AdMob</li>
-        <li>Can watch rewarded ads to temporarily access premium features</li>
-        <li>All core translation functionality remains private and local</li>
+        <li><strong>Free Users:</strong> Subject to advertising data collection by AdMob, can watch rewarded ads to temporarily access premium features, all core translation functionality remains private and local</li>
+        <li><strong>Premium Users:</strong> No advertising data collection, no ads displayed within the app, full access to all features without restrictions</li>
     </ul>
 
-    <p><strong>Premium Users:</strong></p>
+    <h3>Data Controls</h3>
     <ul>
-        <li>No advertising data collection</li>
-        <li>No ads displayed within the app</li>
-        <li>Full access to all features without restrictions</li>
-    </ul>
-
-    <h3>Data Control Options</h3>
-    <p><strong>Advertising Controls</strong> (Free users):</p>
-    <ul>
-        <li>Opt out of personalized ads through Android settings</li>
-        <li>Reset advertising ID to limit ad tracking</li>
-        <li>Watch rewarded ads voluntarily for premium feature access</li>
-    </ul>
-
-    <p><strong>App Data Management:</strong></p>
-    <ul>
-        <li>Clear app data through Android settings to reset all local preferences</li>
-        <li>Export/import glossary data for backup purposes</li>
-        <li>Uninstall the app to remove all local data</li>
-    </ul>
-
-    <p><strong>Subscription Management:</strong></p>
-    <ul>
-        <li>Manage subscriptions through Google Play Store</li>
-        <li>Cancel subscriptions at any time</li>
-        <li>Access purchase history through Google Play</li>
+        <li><strong>Ads:</strong> Opt out of personalized ads through Android Settings > Google > Ads > Opt out of Ads Personalization, or reset your advertising ID to limit tracking</li>
+        <li><strong>App Data:</strong> Clear all local app data through Android Settings > Apps > Cosmo Screen & Image Translate > Storage > Clear Data, or uninstall the app to remove everything</li>
+        <li><strong>Subscriptions:</strong> Manage, cancel, or view subscription history through Google Play Store > Account > Subscriptions</li>
+        <li><strong>Crash Reports:</strong> Contact us through Discord or support channels to request deletion of specific crash reports</li>
     </ul>
 
     <h2>Security</h2>
-    <p>We value your trust and prioritize the security of your data.</p>
-
-    <h3>Local Data Security</h3>
-    <p>For the core functionality of Cosmo Screen & Image Translate, all translation data is processed locally on your device without transmitting it to external servers. This local processing means your images and translations remain within the security boundaries of your own device. We use the Android Storage Access Framework which provides a secure method for accessing only the specific files you explicitly grant permission to access.</p>
-
-    <h3>Third-Party Data Security</h3>
-    <ul>
-        <li><strong>Google Play Billing:</strong> All payment processing uses Google's secure infrastructure with industry-standard encryption and fraud protection.</li>
-        <li><strong>Firebase Crashlytics:</strong> Crash data is transmitted using secure HTTPS connections and stored on Google's secure servers.</li>
-        <li><strong>AdMob:</strong> Advertising data is handled according to Google's security standards and privacy policies.</li>
-    </ul>
-
-    <p>While we implement best practices for secure local processing and data transmission, please note that no method of electronic storage or internet transmission is 100% secure and reliable, and we cannot guarantee absolute security of data stored on your device or transmitted to third-party services.</p>
+    <p>We prioritize your data security through local processing and secure third-party infrastructure. Your images and translations never leave your device. Payment processing uses Google's secure infrastructure. While we implement best practices for secure local processing and data transmission, please note that no method of electronic storage or internet transmission is 100% secure and reliable, and we cannot guarantee absolute security of data stored on your device or transmitted to third-party services.</p>
 
     <h2>Screen Capture and File Access Permissions</h2>
     <p>Our app requires screen capture permissions to take screenshots for translation and file access permissions through the Storage Access Framework (SAF) to save translated images. The Storage Access Framework allows our app to access only the specific files or directories that you explicitly select, rather than requiring broad access to all files on your device. These permissions are used solely for the functionality of the app and not for collecting personal data.</p>
@@ -329,60 +234,22 @@
     <p>This Service may contain links to other sites. If you click on a third-party link, you will be directed to that site. Note that these external sites are not operated by us. Therefore, we strongly advise you to review the Privacy Policy of these websites. We have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.</p>
 
     <h2>Children's Privacy</h2>
-    <p>Cosmo Screen & Image Translate is not directed to anyone under the age of 13. In accordance with the Children's Online Privacy Protection Act (COPPA), we state that our app is not intended for use by children under 13 years of age, and we do not knowingly market to this age group.</p>
+    <p>Cosmo Screen & Image Translate is not directed to anyone under the age of 13. In accordance with the Children's Online Privacy Protection Act (COPPA), we do not knowingly collect personal information from children under 13. If you are a parent or guardian and believe your child is using our app, you can disable personalized ads through Android device settings, clear app data to remove any locally stored preferences, or consider using premium features to eliminate advertising entirely.</p>
 
-    <h3>Data Collection and Children</h3>
-    <p>While our core translation functionality processes all data locally on the device, we do integrate third-party services that may collect data:</p>
+    <h2>Data Management</h2>
+    <p><strong>Local Data:</strong> Data stored locally on your device (preferences, glossaries, cached models) is retained until you clear the app's data through Android settings, uninstall the application, or manually delete specific data like glossary entries.</p>
+    <p><strong>Third-Party Data:</strong> Advertising data is retained according to Google's policies, crash reports are typically retained for 90 days, and purchase data is retained according to Google Play's billing policies and legal requirements.</p>
+    <p><strong>Data Deletion:</strong> To delete your data, clear app data in Android settings or uninstall the app (local), reset your advertising ID in Android settings (ads), or contact us to request deletion of specific crash reports.</p>
 
-    <p><strong>For children under 13:</strong></p>
-    <ul>
-        <li>We do not knowingly collect personal information from children under 13</li>
-        <li>AdMob advertising is subject to Google's policies regarding children's data</li>
-        <li>Firebase Crashlytics may collect technical data but does not collect personally identifiable information</li>
-        <li>If we discover we have collected personal information from a child under 13, we will delete it immediately</li>
-    </ul>
-
-    <p><strong>Parental Controls:</strong></p>
-    <p>If you are a parent or guardian and believe your child is using our app:</p>
-    <ul>
-        <li>You can disable personalized ads through Android device settings</li>
-        <li>You can clear app data to remove any locally stored preferences</li>
-        <li>You can contact us for guidance on managing app permissions and data</li>
-        <li>Consider using premium features to eliminate advertising entirely</li>
-    </ul>
-
-    <h2>Data Retention</h2>
-
-    <h3>Local Data</h3>
-    <p>Data stored locally on your device (preferences, glossaries, cached models) is retained until you:</p>
-    <ul>
-        <li>Clear the app's data through Android settings</li>
-        <li>Uninstall the application</li>
-        <li>Manually delete specific data (like glossary entries)</li>
-    </ul>
-
-    <h3>Third-Party Data Retention</h3>
-    <ul>
-        <li><strong>AdMob:</strong> Advertising data is retained according to Google's advertising data retention policies</li>
-        <li><strong>Firebase Crashlytics:</strong> Crash reports are typically retained for 90 days, with aggregated data retained longer for trend analysis</li>
-        <li><strong>Google Play Billing:</strong> Purchase and subscription data is retained according to Google Play's billing policies and legal requirements</li>
-    </ul>
-
-    <h3>Data Deletion</h3>
-    <p>To delete your data:</p>
-    <ul>
-        <li><strong>Local data:</strong> Clear app data in Android settings or uninstall the app</li>
-        <li><strong>Advertising data:</strong> Reset your advertising ID in Android settings</li>
-        <li><strong>Crash reports:</strong> Contact us to request deletion of specific crash reports</li>
-        <li><strong>Purchase data:</strong> Managed by Google Play according to their retention policies</li>
-    </ul>
+    <h2>User Responsibility for Translated Content</h2>
+    <p>Users are solely responsible for ensuring they have proper rights and permissions before distributing or sharing translated images, particularly for copyrighted material such as comics, manga, or other protected content. This app is a translation tool only - users must comply with all applicable copyright laws and intellectual property rights. We are not responsible for any copyright infringement or legal issues arising from user-generated translations or distribution of translated content.</p>
 
     <h2>Changes to This Privacy Policy</h2>
     <p>We may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on this page. These changes are effective immediately after they are posted on this page.</p>
 
     <h2>Contact Us</h2>
     <p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us.</p>
-
+    
     <div class="footer">
         <p>Cosmo Screen & Image Translate Privacy Policy</p>
     </div>

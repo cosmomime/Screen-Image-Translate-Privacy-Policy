@@ -1,6 +1,6 @@
 # Privacy Policy
 
-**Last Updated**: May 2025
+**Last Updated:** October 2025
 
 Cosmo Screen & Image Translate is available as a freemium app with optional premium subscriptions. This SERVICE is provided with both free and premium tiers and is intended for use as is.
 
@@ -12,13 +12,13 @@ The terms used in this Privacy Policy have the same meanings as in our Terms and
 
 ## Overview
 
-Cosmo Screen & Image Translate primarily processes image data for translation purposes. The app captures screenshots and processes images that you explicitly select.
+Cosmo Screen & Image Translate primarily processes image data for translation purposes. The app captures screenshots and processes images that you explicitly select. You can choose between local offline translation (using ML Kit) or online translation services (DeepSeek, OpenRouter) that require internet connectivity.
 
-**Core Privacy Principles**:
-- All translation processing occurs locally on your device
-- Your images and translations never leave your device
-- We integrate with third-party services for ads (free users), crash reporting, and billing
-- Premium users have no advertising data collection
+> **Core Privacy Principles:**
+> - **Local translation:** All processing occurs on your device - images and translations never leave your device
+> - **Online translation:** Text content is sent to third-party APIs only when you explicitly choose online services
+> - We integrate with third-party services for ads (free users), crash reporting, and billing
+> - Premium users have no advertising data collection
 
 ## Information We Collect
 
@@ -33,19 +33,25 @@ Cosmo Screen & Image Translate primarily processes image data for translation pu
 - **Firebase Crashlytics**: Crash reports, performance data, device information
 - **Google Play Services**: Device info, account authentication, billing data
 - **Google Play Billing**: Purchase transactions, subscription status
+- **DeepSeek API** (when using online translation): Text content for translation, API usage metadata
+- **OpenRouter API** (when using online translation): Text content for translation, API usage metadata
 
-**Note**: All translation processing occurs locally - your images and translations never leave your device.
+**Note:** Local translation processing occurs entirely on your device - your images and translations never leave your device. Online translation services only transmit text content when you explicitly choose these options.
 
 ## Advertising and Monetization
 
 ### Free User Advertising
+
 Free users will see advertisements provided by Google AdMob. These ads help support the development and maintenance of the app.
 
-**Types of Ads**:
+**Types of Ads:**
 - Banner ads displayed within the app interface
+- Native ads integrated within the app's content areas
+- Interstitial ads shown at natural break points (10-minute minimum intervals)
 - Rewarded video ads that provide temporary access to premium features
 
-**Data Collection by AdMob**:
+**Data Collection by AdMob:**
+
 Google AdMob may collect and use the following information to provide personalized advertisements:
 - Device information (device model, operating system, unique device identifiers)
 - App usage information (interactions with ads, app usage patterns)
@@ -53,71 +59,112 @@ Google AdMob may collect and use the following information to provide personaliz
 - Network connectivity information
 - Location information (general location, not precise real-time location data)
 
-**Ad Personalization**:
+**Ad Personalization:**
+
 You can control ad personalization through your device's advertising settings:
-- **Android**: Settings > Google > Ads > Opt out of Ads Personalization
+- **Android:** Settings > Google > Ads > Opt out of Ads Personalization
 - You can also reset your advertising ID in the same settings menu
 
-**Premium Users**: Premium subscribers do not see advertisements and are not subject to advertising data collection.
+**Premium Users:** Premium subscribers do not see advertisements and are not subject to advertising data collection.
 
 ### In-App Purchases and Subscriptions
+
 We offer premium subscriptions and in-app purchases processed through Google Play Billing:
 
-**Purchase Information Collected**:
+**Purchase Information Collected:**
 - Purchase transaction details (product purchased, price, date)
 - Google Play account information (as provided by Google Play)
 - Purchase verification tokens for security
 
-**Payment Processing**: All payment processing is handled securely by Google Play. We do not directly collect or store your payment card information.
-
-**Subscription Management**: Subscription status and renewal information is managed through Google Play and synchronized with our app to provide premium features.
+**Payment Processing:** All payment processing is handled securely by Google Play. We do not directly collect or store your payment card information.
+**Subscription Management:** Subscription status and renewal information is managed through Google Play and synchronized with our app to provide premium features.
 
 ## Error Reporting and Crash Analytics
 
 ### Firebase Crashlytics
+
 We use Firebase Crashlytics to automatically collect crash reports and app performance data to help us improve the app's stability and performance.
 
-**Information Collected**:
+**Information Collected:**
 - Crash logs and stack traces
 - Device information (model, operating system version, available memory)
 - App version and configuration at the time of the crash
 - User actions leading up to the crash (anonymized)
 - Performance metrics (app startup time, network request performance)
 
-**Data Usage**: This information is used solely to identify and fix bugs, improve app performance, and enhance user experience. Crash data is anonymized and does not contain personal information.
+**Data Usage:** This information is used solely to identify and fix bugs, improve app performance, and enhance user experience. Crash data is anonymized and does not contain personal information.
 
 ### Local Error Logs
+
 The app may also generate error logs stored locally on your device. These logs are not automatically transmitted and remain under your control. If you contact us for technical support, we may ask you to voluntarily share relevant logs to help diagnose issues.
+
+## Data Storage and Local Processing
+
+### Cookies and Tracking Technologies
+
+The app itself does not use cookies directly. However, third-party services integrated within the app may use local storage or similar technologies:
+- **AdMob:** May store advertising preferences and identifiers locally
+- **Firebase:** May store analytics and crash reporting identifiers
+- **Google Play Services:** May store authentication and billing information
+
+This data is stored locally on your device and managed by the respective third-party services according to their privacy policies.
 
 ## Translation Processing
 
-All image processing and translation occurs locally on your device. No images or translations are transmitted to external servers. In future updates, we may offer optional online translation services that will be clearly marked and require explicit consent.
+### Local Translation (ML Kit)
+
+All image processing and translation occurs locally on your device using Google's ML Kit. No images, text, or translations are transmitted to external servers. Translation models are downloaded and stored locally on your device.
+
+### Online Translation Services (Optional)
+
+You may optionally choose online translation services (DeepSeek or OpenRouter) that require internet connectivity. When using these services:
+- Only the extracted text content is sent to the chosen API provider
+- Images never leave your device
+- You must provide your own API keys for these services
+- Data is transmitted securely over HTTPS
+- Translation results are processed locally after being received
+
+**Important:** Online translation services are clearly marked in the app and require explicit user selection. You can switch between local and online services at any time.
+
+## API Key Management
+
+For online translation services, you must provide your own API keys for DeepSeek and OpenRouter services. These keys are:
+- **Stored locally** on your device only
+- **Not transmitted** to our servers or any third parties except the chosen translation service
+- **Used only** for making authenticated requests to the translation APIs
+- **Encrypted** using Android's built-in security features
+
+**Security Note:** API keys are sensitive credentials. We recommend using dedicated API keys with limited permissions and monitoring your usage through the respective service providers. You are responsible for securing your API keys and managing your account usage with these third-party services.
 
 ## Third-Party Services
-
 - **Google Play Services** - App distribution, updates, billing | [Privacy Policy](https://www.google.com/policies/privacy/)
 - **Google AdMob** (Free users) - Advertisements and targeting | [Privacy Policy](https://support.google.com/admob/answer/6128543)
 - **Firebase Crashlytics** - Crash reporting (anonymized) | [Privacy Policy](https://firebase.google.com/support/privacy)
 - **Google Play Billing** - Secure payment processing | [Privacy Policy](https://payments.google.com/payments/apis-secure/get_legal_document?ldo=0&ldt=privacynotice)
+- **Google ML Kit** - Local translation processing | [Terms](https://developers.google.com/ml-kit/terms)
+- **DeepSeek API** (Optional online translation) - AI-powered translation | [Privacy Policy](https://platform.deepseek.com/privacy)
+- **OpenRouter API** (Optional online translation) - AI model routing | [Privacy Policy](https://openrouter.ai/privacy)
 - **OpenCV** - Local image processing only (no data collection)
 
 ### Data Sharing
-- **Images/translations**: Never shared - processed locally only
-- **Crash data**: Anonymized reports to Firebase for debugging
-- **Ad data**: Device identifiers to AdMob (free users only)
-- **Purchase data**: Transaction details to Google Play Billing
+- **Images/translations:** Never shared - processed locally only
+- **Text content (online translation):** Sent to DeepSeek/OpenRouter APIs only when you choose online services
+- **Crash data:** Anonymized reports to Firebase for debugging
+- **Ad data:** Device identifiers to AdMob (free users only)
+- **Purchase data:** Transaction details to Google Play Billing
+- **API keys:** Not shared - used only for authenticating with chosen translation services
 
 ## Your Rights and Controls
 
 ### Free vs Premium Users
-- **Free Users**: Subject to advertising data collection by AdMob, can watch rewarded ads to temporarily access premium features, all core translation functionality remains private and local
-- **Premium Users**: No advertising data collection, no ads displayed within the app, full access to all features without restrictions
+- **Free Users:** Subject to advertising data collection by AdMob, can watch rewarded ads to temporarily access premium features, all core translation functionality remains private and local
+- **Premium Users:** No advertising data collection, no ads displayed within the app, full access to all features without restrictions
 
 ### Data Controls
-- **Ads**: Opt out of personalized ads through Android Settings > Google > Ads > Opt out of Ads Personalization, or reset your advertising ID to limit tracking
-- **App Data**: Clear all local app data through Android Settings > Apps > Cosmo Screen & Image Translate > Storage > Clear Data, or uninstall the app to remove everything
-- **Subscriptions**: Manage, cancel, or view subscription history through Google Play Store > Account > Subscriptions
-- **Crash Reports**: Contact us through Discord or support channels to request deletion of specific crash reports
+- **Ads:** Opt out of personalized ads through Android Settings > Google > Ads > Opt out of Ads Personalization, or reset your advertising ID to limit tracking
+- **App Data:** Clear all local app data through Android Settings > Apps > Cosmo Screen & Image Translate > Storage > Clear Data, or uninstall the app to remove everything
+- **Subscriptions:** Manage, cancel, or view subscription history through Google Play Store > Account > Subscriptions
+- **Crash Reports:** Contact us through Discord or support channels to request deletion of specific crash reports
 
 ## Security
 
@@ -138,12 +185,15 @@ Cosmo Screen & Image Translate is not directed to anyone under the age of 13. In
 ## Data Management
 
 ### Local Data
+
 Data stored locally on your device (preferences, glossaries, cached models) is retained until you clear the app's data through Android settings, uninstall the application, or manually delete specific data like glossary entries.
 
 ### Third-Party Data
+
 Advertising data is retained according to Google's policies, crash reports are typically retained for 90 days, and purchase data is retained according to Google Play's billing policies and legal requirements.
 
 ### Data Deletion
+
 To delete your data, clear app data in Android settings or uninstall the app (local), reset your advertising ID in Android settings (ads), or contact us to request deletion of specific crash reports.
 
 ## User Responsibility for Translated Content
@@ -157,3 +207,7 @@ We may update our Privacy Policy from time to time. Thus, you are advised to rev
 ## Contact Us
 
 If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us.
+
+---
+
+Cosmo Screen & Image Translate Privacy Policy

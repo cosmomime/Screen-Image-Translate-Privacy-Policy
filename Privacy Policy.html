@@ -67,7 +67,7 @@
 <body>
     <h1>Privacy Policy</h1>
 
-    <div class="date"><strong>Last Updated:</strong> May 2025</div>
+    <div class="date"><strong>Last Updated:</strong> October 2025</div>
 
     <p>Cosmo Screen & Image Translate is available as a freemium app with optional premium subscriptions. This SERVICE is provided with both free and premium tiers and is intended for use as is.</p>
     <p>This page is used to inform users regarding our policies with the collection, use, and disclosure of Personal Information if anyone decided to use our Service.</p>
@@ -75,13 +75,13 @@
     <p>The terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, which are accessible within the Cosmo Screen & Image Translate app unless otherwise defined in this Privacy Policy.</p>
 
     <h2>Overview</h2>
-    <p>Cosmo Screen & Image Translate primarily processes image data for translation purposes. The app captures screenshots and processes images that you explicitly select.</p>
+    <p>Cosmo Screen & Image Translate primarily processes image data for translation purposes. The app captures screenshots and processes images that you explicitly select. You can choose between local offline translation (using ML Kit) or online translation services (DeepSeek, OpenRouter) that require internet connectivity.</p>
 
     <div class="highlight">
         <strong>Core Privacy Principles:</strong>
         <ul>
-            <li>All translation processing occurs locally on your device</li>
-            <li>Your images and translations never leave your device</li>
+            <li><strong>Local translation:</strong> All processing occurs on your device - images and translations never leave your device</li>
+            <li><strong>Online translation:</strong> Text content is sent to third-party APIs only when you explicitly choose online services</li>
             <li>We integrate with third-party services for ads (free users), crash reporting, and billing</li>
             <li>Premium users have no advertising data collection</li>
         </ul>
@@ -103,9 +103,11 @@
         <li><strong>Firebase Crashlytics</strong>: Crash reports, performance data, device information</li>
         <li><strong>Google Play Services</strong>: Device info, account authentication, billing data</li>
         <li><strong>Google Play Billing</strong>: Purchase transactions, subscription status</li>
+        <li><strong>DeepSeek API</strong> (when using online translation): Text content for translation, API usage metadata</li>
+        <li><strong>OpenRouter API</strong> (when using online translation): Text content for translation, API usage metadata</li>
     </ul>
 
-    <p><strong>Note:</strong> All translation processing occurs locally - your images and translations never leave your device.</p>
+    <p><strong>Note:</strong> Local translation processing occurs entirely on your device - your images and translations never leave your device. Online translation services only transmit text content when you explicitly choose these options.</p>
 
     <h2>Advertising and Monetization</h2>
 
@@ -115,6 +117,8 @@
     <p><strong>Types of Ads:</strong></p>
     <ul>
         <li>Banner ads displayed within the app interface</li>
+        <li>Native ads integrated within the app's content areas</li>
+        <li>Interstitial ads shown at natural break points (10-minute minimum intervals)</li>
         <li>Rewarded video ads that provide temporary access to premium features</li>
     </ul>
 
@@ -171,15 +175,6 @@
 
     <h2>Data Storage and Local Processing</h2>
 
-    <h3>Local Data Storage</h3>
-    <p>Cosmo Screen & Image Translate stores the following data locally on your device:</p>
-    <ul>
-        <li>App preferences and settings</li>
-        <li>User tier status (free/premium)</li>
-        <li>Temporary access permissions for premium features</li>
-        <li>Translation glossary entries</li>
-        <li>Cached translation models</li>
-    </ul>
 
     <h3>Cookies and Tracking Technologies</h3>
     <p>The app itself does not use cookies directly. However, third-party services integrated within the app may use local storage or similar technologies:</p>
@@ -191,7 +186,30 @@
     <p>This data is stored locally on your device and managed by the respective third-party services according to their privacy policies.</p>
 
     <h2>Translation Processing</h2>
-    <p>All image processing and translation occurs locally on your device. No images or translations are transmitted to external servers. In future updates, we may offer optional online translation services that will be clearly marked and require explicit consent.</p>
+
+    <h3>Local Translation (ML Kit)</h3>
+    <p>All image processing and translation occurs locally on your device using Google's ML Kit. No images, text, or translations are transmitted to external servers. Translation models are downloaded and stored locally on your device.</p>
+
+    <h3>Online Translation Services (Optional)</h3>
+    <p>You may optionally choose online translation services (DeepSeek or OpenRouter) that require internet connectivity. When using these services:</p>
+    <ul>
+        <li>Only the extracted text content is sent to the chosen API provider</li>
+        <li>Images never leave your device</li>
+        <li>You must provide your own API keys for these services</li>
+        <li>Data is transmitted securely over HTTPS</li>
+        <li>Translation results are processed locally after being received</li>
+    </ul>
+    <p><strong>Important:</strong> Online translation services are clearly marked in the app and require explicit user selection. You can switch between local and online services at any time.</p>
+
+    <h2>API Key Management</h2>
+    <p>For online translation services, you must provide your own API keys for DeepSeek and OpenRouter services. These keys are:</p>
+    <ul>
+        <li><strong>Stored locally</strong> on your device only</li>
+        <li><strong>Not transmitted</strong> to our servers or any third parties except the chosen translation service</li>
+        <li><strong>Used only</strong> for making authenticated requests to the translation APIs</li>
+        <li><strong>Encrypted</strong> using Android's built-in security features</li>
+    </ul>
+    <p><strong>Security Note:</strong> API keys are sensitive credentials. We recommend using dedicated API keys with limited permissions and monitoring your usage through the respective service providers. You are responsible for securing your API keys and managing your account usage with these third-party services.</p>
 
     <h2>Third-Party Services</h2>
     <ul>
@@ -199,15 +217,20 @@
         <li><strong>Google AdMob</strong> (Free users) - Advertisements and targeting | <a href="https://support.google.com/admob/answer/6128543">Privacy Policy</a></li>
         <li><strong>Firebase Crashlytics</strong> - Crash reporting (anonymized) | <a href="https://firebase.google.com/support/privacy">Privacy Policy</a></li>
         <li><strong>Google Play Billing</strong> - Secure payment processing | <a href="https://payments.google.com/payments/apis-secure/get_legal_document?ldo=0&ldt=privacynotice">Privacy Policy</a></li>
+        <li><strong>Google ML Kit</strong> - Local translation processing | <a href="https://developers.google.com/ml-kit/terms">Terms</a></li>
+        <li><strong>DeepSeek API</strong> (Optional online translation) - AI-powered translation | <a href="https://platform.deepseek.com/privacy">Privacy Policy</a></li>
+        <li><strong>OpenRouter API</strong> (Optional online translation) - AI model routing | <a href="https://openrouter.ai/privacy">Privacy Policy</a></li>
         <li><strong>OpenCV</strong> - Local image processing only (no data collection)</li>
     </ul>
 
     <h3>Data Sharing</h3>
     <ul>
         <li><strong>Images/translations:</strong> Never shared - processed locally only</li>
+        <li><strong>Text content (online translation):</strong> Sent to DeepSeek/OpenRouter APIs only when you choose online services</li>
         <li><strong>Crash data:</strong> Anonymized reports to Firebase for debugging</li>
         <li><strong>Ad data:</strong> Device identifiers to AdMob (free users only)</li>
         <li><strong>Purchase data:</strong> Transaction details to Google Play Billing</li>
+        <li><strong>API keys:</strong> Not shared - used only for authenticating with chosen translation services</li>
     </ul>
 
     <h2>Your Rights and Controls</h2>

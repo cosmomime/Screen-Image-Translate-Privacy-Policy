@@ -67,7 +67,7 @@
 <body>
 <h1>Privacy Policy</h1>
 
-<div class="date"><strong>Last Updated:</strong> January 2026</div>
+<div class="date"><strong>Last Updated:</strong> March 2024</div>
 
 <p>Cosmo Screen &amp; Comic Translate is available as a freemium app with optional premium subscriptions. This SERVICE is provided with both free and premium tiers and is intended for use as is.</p>
 <p>This page is used to inform users regarding our policies with the collection, use, and disclosure of Personal Information if anyone decided to use our Service.</p>
@@ -82,6 +82,8 @@
     <ul>
         <li><strong>Local translation:</strong> All processing occurs on your device - images and translations never leave your device</li>
         <li><strong>Online translation:</strong> Text content is sent to third-party APIs only when you explicitly choose online services</li>
+        <li><strong>Background Processing:</strong> Intensive tasks like batch translation continue in the background via Foreground Services</li>
+        <li><strong>Transparency:</strong> Active background tasks are always visible via system notifications</li>
         <li><strong>Clipboard Access:</strong> The app accesses your device clipboard only when you explicitly use the Copy or Paste features within the app</li>
         <li><strong>Local PDF Export:</strong> PDF creation and generation happens locally on your device</li>
         <li>We integrate with third-party services for ads (free users), crash reporting, and billing</li>
@@ -199,6 +201,14 @@
 <h3>Local Translation (ML Kit)</h3>
 <p>All image processing and translation occurs locally on your device using Google's ML Kit. No images, text, or translations are transmitted to external servers. Translation models are downloaded and stored locally on your device.</p>
 
+<h3>Batch Translation &amp; Background Processing</h3>
+<p>The app provides a "Batch Translation" feature for processing large volumes of images. To ensure these long-running tasks complete successfully if you switch apps or lock your screen, the app uses a **Foreground Service**. While this service is active:</p>
+<ul>
+    <li>A persistent notification is displayed showing real-time progress.</li>
+    <li>Processing occurs locally on your device.</li>
+    <li>The task can be cancelled at any time by the user via the notification or the app UI.</li>
+</ul>
+
 <h3>Online Translation Services (Optional)</h3>
 <p>You may optionally choose online translation services (DeepSeek or OpenRouter) that require internet connectivity. When using these services:</p>
 <ul>
@@ -272,8 +282,10 @@
 <h2>Screen Capture and File Access Permissions</h2>
 <ul>
     <li><strong>Screen Capture:</strong> Our app uses the Android Media Projection API to capture screenshots for translation. When you initiate a capture, the system will display a standard prompt to confirm your permission. Captured content is processed temporarily for translation and is never stored or transmitted unless you explicitly save or share it.</li>
+    <li><strong>Foreground Services (MEDIA_PROCESSING & MEDIA_PROJECTION):</strong> Required to ensure background translation tasks (Batch and Floating Button) are not interrupted by the system. These services are always accompanied by a visible notification.</li>
+    <li><strong>Notifications (POST_NOTIFICATIONS):</strong> Used to provide real-time feedback and progress updates for long-running translation tasks.</li>
     <li><strong>Overlay Permission (SYSTEM_ALERT_WINDOW):</strong> Required to display the floating translation button and result panels over other applications.</li>
-    <li><strong>File Access:</strong> We use the Storage Access Framework (SAF) to save translated images and exported PDFs. This allows our app to access only the specific files or directories that you explicitly select, rather than requiring broad access to all files on your device.</li>
+    <li><strong>File Access:</strong> We use the Storage Access Framework (SAF) to save translated images and exported PDFs. This allows our app to access only the specific files or directories that you explicitly select.</li>
 </ul>
 
 <h2>Links to Other Sites</h2>

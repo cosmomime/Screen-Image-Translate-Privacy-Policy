@@ -234,7 +234,7 @@
 <h3>Clipboard and PDF Operations</h3>
 <ul>
     <li><strong>Clipboard:</strong> The app requires clipboard access to facilitate the "Copy all" and "Paste all" functionality in the Advanced Viewer. This allows you to easily move text between our app and other translation tools. We do not store or transmit your clipboard history.</li>
-    <li><strong>PDF Export:</strong> When you use the PDF export feature, all file generation is performed locally on your device using the iText library. The resulting PDF is saved to your chosen storage location and is not uploaded to any server.</li>
+    <li><strong>PDF Export:</strong> When you use the PDF export feature, all file generation is performed locally on your device using the PdfBox-Android library. The resulting PDF is saved to your chosen storage location and is not uploaded to any server.</li>
 </ul>
 
 <h2>API Key Management</h2>
@@ -258,7 +258,7 @@
     <li><strong>DeepSeek API</strong> (Optional online translation) - AI-powered translation | <a href="https://platform.deepseek.com/privacy">Privacy Policy</a></li>
     <li><strong>OpenRouter API</strong> (Optional online translation) - AI model routing | <a href="https://openrouter.ai/privacy">Privacy Policy</a></li>
     <li><strong>OpenCV</strong> - Local image processing only (no data collection)</li>
-    <li><strong>iText</strong> - Local PDF generation (no data collection)</li>
+    <li><strong>PdfBox-Android</strong> - Local PDF generation (no data collection)</li>
 </ul>
 
 <h3>Data Sharing</h3>
@@ -294,7 +294,7 @@
 <ul>
     <li><strong>Screen Capture:</strong> Our app uses the Android Media Projection API to capture screenshots for translation. When you initiate a capture, the system will display a standard prompt to confirm your permission. Captured content is processed temporarily for translation and is never stored or transmitted unless you explicitly save or share it.</li>
     <li><strong>Browser View Capture:</strong> Used specifically within the Browser Translate feature to translate web content. This is a localized capture of the app's own browser view.</li>
-    <li><strong>Foreground Services (MEDIA_PROCESSING & MEDIA_PROJECTION):</strong> Required to ensure background translation tasks (Batch, Floating Button, and Browser) are not interrupted by the system. These services are always accompanied by a visible notification.</li>
+    <li><strong>Foreground Services (DATA_SYNC, MEDIA_PROCESSING & MEDIA_PROJECTION):</strong> Required to ensure background translation tasks (Batch, Floating Button, and Browser) are not interrupted by the system. These services allow for **local data processing** and **importing/exporting** of translated images even when the app is in the background. Active services are always accompanied by a visible notification.</li>
     <li><strong>Notifications (POST_NOTIFICATIONS):</strong> Used to provide real-time feedback and progress updates for long-running translation tasks.</li>
     <li><strong>Overlay Permission (SYSTEM_ALERT_WINDOW):</strong> Required to display the floating translation button and result panels over other applications.</li>
     <li><strong>File Access:</strong> We use the Storage Access Framework (SAF) to save translated images and exported PDFs. This allows our app to access only the specific files or directories that you explicitly select.</li>
